@@ -1,0 +1,331 @@
+/* Schedule page specific styles */
+.schedule-container {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+}
+
+.schedule-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding: 0 15px;
+}
+
+.schedule-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.schedule-btn-add {
+  background-color: #6366f1;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(99, 102, 241, 0.1);
+}
+
+.schedule-btn-add:hover {
+  background-color: #4f46e5;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(99, 102, 241, 0.2);
+}
+
+.schedule-btn-add i {
+  font-size: 12px;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.schedule-table th {
+  background: #f9fafb;
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 13px;
+}
+
+.schedule-table td {
+  padding: 12px 15px;
+  color: #4b5563;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.schedule-table tr:hover {
+  background-color: #f9fafb;
+}
+
+.schedule-table td:last-child {
+  width: 200px;
+  text-align: right;
+  padding-right: 20px;
+}
+
+.schedule-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.schedule-btn-edit,
+.schedule-btn-delete {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.schedule-btn-edit {
+  background-color: #6366f1;
+  color: white;
+}
+
+.schedule-btn-delete {
+  background-color: #ef4444;
+  color: white;
+}
+
+.schedule-btn-edit:hover {
+  background-color: #4f46e5;
+  transform: translateY(-1px);
+}
+
+.schedule-btn-delete:hover {
+  background-color: #dc2626;
+  transform: translateY(-1px);
+}
+
+.schedule-btn-edit i,
+.schedule-btn-delete i {
+  font-size: 12px;
+}
+
+/* Modal styles */
+.schedule-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.schedule-modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 0;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  transform: translateY(0);
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.schedule-modal-header {
+  padding: 20px 25px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.schedule-modal-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #111827;
+  font-weight: 600;
+}
+
+.schedule-modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #9ca3af;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.schedule-modal-close:hover {
+  color: #4b5563;
+}
+
+#scheduleForm {
+  padding: 25px;
+}
+
+.schedule-form-group {
+  margin-bottom: 20px;
+}
+
+.schedule-form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #374151;
+  font-size: 0.875rem;
+}
+
+.schedule-form-control {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  color: #111827;
+  background-color: #fff;
+  transition: all 0.2s ease;
+}
+
+.schedule-form-control:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.schedule-form-control::placeholder {
+  color: #9ca3af;
+}
+
+.schedule-form-actions {
+  padding: 20px 25px;
+  background-color: #f9fafb;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.schedule-btn-save,
+.schedule-btn-cancel {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.schedule-btn-save {
+  background-color: #6366f1;
+  color: white;
+  border: none;
+}
+
+.schedule-btn-save:hover {
+  background-color: #4f46e5;
+  transform: translateY(-1px);
+}
+
+.schedule-btn-cancel {
+  background-color: white;
+  color: #4b5563;
+  border: 1px solid #e5e7eb;
+}
+
+.schedule-btn-cancel:hover {
+  background-color: #f3f4f6;
+  border-color: #d1d5db;
+}
+
+/* Add hover effect to form controls */
+select.schedule-form-control {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: 2.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .schedule-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .schedule-btn-add {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .schedule-container {
+    margin: 10px;
+    padding: 15px;
+  }
+}
+
+/* Responsive adjustments for modal */
+@media (max-width: 640px) {
+  .schedule-modal-content {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+
+  .schedule-form-actions {
+    position: sticky;
+    bottom: 0;
+    border-radius: 0;
+  }
+
+  #scheduleForm {
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+  }
+}
